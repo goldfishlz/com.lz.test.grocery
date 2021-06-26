@@ -3,7 +3,7 @@ person:
   age: 35
   email: dlxiaozh@hotmail.com
   happy: true
-  birth: 2002/12/23
+  birth: 2002/12/5
   maps: { k1: k,k2: v }
   lists:
         -adidas
