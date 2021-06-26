@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head align="center">
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+  </head>
+
+  <body >
+
+    <h1>Order details</h1>
+
+    <h2>Customer</h2>
+    <div>
+    <table align="center" border="2" width="500" height="5" style="background:#99FFCC">
+    <thead style="background:#00FFFF;text-align: center;vertical-align: middle;">
+    <tr style="text-align: center;vertical-align: middle;">
+    <th scope="col">Id</th>
+    <th>LastName</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>DepartmentName</th>
+    <th width="500">Date</th>
+    <th colspan="2">do</th>
+    </tr>
+    </thead>
+    <tbody>
+ <tr th:each="em:${emps}">
+       <td th:text="${em.getId()}"></td>
+       <td th:text="${em.getLastName()}"></td>
+       <td th:text="${em.getEmail()}"></td>
+       <td th:text="${em.getGender()==0?'man':'women'}"></td>
+       <td th:text="${em.department.getDepartmentName()}"></td>
+       <td th:text="${#dates.format(em.getBirth(),'yyyy-MM-dd HH:mm:ss')}"></td>
+       <td>
+       <button class="btn btn-sm btn-primary">edit</button>
+       </td>
+       <td>
+       <button class="btn btn-sm btn-danger">delete</button>
+       </td>
+       
+ </tr> 
+     </tbody>
+    </table>
+    
+    </div>
+
+      <p>
+        <b>Since:</b>
+        <!-- <span th:text="*{#calendars.format(customerSince,'dd MMM yyyy')}">1 jan 2011</span> -->
+      </p>
+    </div>
+  
+    <!-- <h2>Products</h2>
+  
+    <table>
+      <tr>
+        <th>PRODUCT</th>
+        <th>AMOUNT</th>
+        <th>PURCHASE PRICE</th>
+      </tr>
+      <tr th:each="ol,row : *{orderLines}" th:class="${row.odd}? 'odd'">
+        <td th:text="${ol.product.name}">Strawberries</td>
+        <td th:text="${ol.amount}" class="number">3</td>
+        <td th:text="${ol.purchasePrice}" class="number">23.32</td>
+      </tr>
+    </table>
+
+    <div>
+      <b>TOTAL:</b>
+      <span th:text="*{#aggregates.sum(orderLines.{purchasePrice * amount})}">35.23</span>
+    </div>
+  
+    <p>
+      <a href="list.html" th:href="@{/order/list}">Return to order list</a>
+    </p>
+ -->
+  </body>
+  
+</html>

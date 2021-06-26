@@ -1,0 +1,13 @@
+person:
+  name: liuzhi
+  age: 35
+  email: dlxiaozh@hotmail.com
+  happy: true
+  birth: 2002/12/23
+  maps: { k1: k,k2: v }
+  lists:
+        -adidas
+        -nike
+        -puma
+  List: [zhangsan,lisi,wangwu]
+  friends: {lastName: zhangsan,firstName: lisi}
