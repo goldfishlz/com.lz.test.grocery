@@ -10,4 +10,4 @@ person:
         -nike
         -puma
   List: [zhangsan,lissi,wangwu]
-  friends: {lastName: zhangsan,firstName: lz}
+  friends: {lastName: zhangsan,firstName: dada}
