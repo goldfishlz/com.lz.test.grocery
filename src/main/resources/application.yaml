@@ -9,5 +9,5 @@ person:
         -adidas
         -nike
         -puma
-  List: [zhangsan,lisi,wangwu]
+  List: [zhangsan,lissi,wangwu]
   friends: {lastName: zhangsan,firstName: lz}
